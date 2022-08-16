@@ -6,8 +6,7 @@ import { ArticleList } from "../news/ArticleList.js";
 export const ApplicationViews = () => {
     return (
         <Routes>
-          <Route path="/" element={<ArticleList />} />
-          <Route path="/ticket/create" element={<ArticleForm />} />
+          
       <Route
         path="/"
         element={
@@ -19,7 +18,8 @@ export const ApplicationViews = () => {
           </React.Fragment>
         }
       >
-        
+        <Route path="/" element={<ArticleList />} />
+        <Route path="/article/create" element={<ArticleForm />} />
       </Route>
     </Routes>
     )

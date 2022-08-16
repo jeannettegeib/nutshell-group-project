@@ -23,7 +23,7 @@ export const ArticleList =()=>{
             {
                 articles.map(
                     (article)=>{
-                        return <section className="article">
+                        return <section className="article" key="${article.id}">
                             <header className="title">
                                 {article.title}
                             </header>
