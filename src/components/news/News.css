@@ -1,0 +1,7 @@
+.news{
+    position: fixed;
+    top: 50px;
+    right: 3px;
+    width: 40%;
+    border: 2px dashed gray
+}
