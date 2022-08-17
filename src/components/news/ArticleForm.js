@@ -16,8 +16,8 @@ export const ArticleForm=()=>{
 
         const articleToSendToAPI={
            userId: userObject,
-           title: article.title,
            url: article.url,
+           title: article.title,
            synopsis: article.synopsis
         }
 
@@ -28,7 +28,7 @@ export const ArticleForm=()=>{
         })
         .then(response =>response.json())
         .then(()=>{
-            navigate("./")
+            navigate("../../")
         })
 
     }
