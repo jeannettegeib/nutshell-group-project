@@ -55,11 +55,7 @@ export const TaskList = () => {
               </section>
             );
           } else {
-            return (
-              <>
-                <h3>Task List Empty</h3>
-              </>
-            );
+            return ""
           }
         })}
       </article>
