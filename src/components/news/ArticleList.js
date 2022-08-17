@@ -23,7 +23,7 @@ export const ArticleList =()=>{
             {
                 articles.map(
                     (article)=>{
-                        return <section className="article" key="${article.id}">
+                        return (<section className="article" key={`task--${article.id}`}>
                             <header className="title">
                                 {article.title}
                             </header>
@@ -34,7 +34,7 @@ export const ArticleList =()=>{
                                 {article.url}
                             </footer>
                         </section>
-                    }
+                 ) }
                 )
             }
             <button onClick={()=>navigate("/article/create")}>Add News Article</button>

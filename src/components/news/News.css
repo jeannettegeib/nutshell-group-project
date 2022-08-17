@@ -5,3 +5,8 @@
     width: 40%;
     border: 2px dashed gray
 }
+.article{
+    border: 1px solid gray;
+    border-radius: 5;
+
+}

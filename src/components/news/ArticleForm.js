@@ -9,13 +9,14 @@ export const ArticleForm=()=>{
     })
     const localUser=localStorage.getItem("nutshell_user")
     const userObject=JSON.parse(localUser)
+
     const navigate=useNavigate()
 
     const handlePostButtonClick=(event)=>{
-        event.preventDefailt()
+        event.preventDefault();
 
         const articleToSendToAPI={
-           userId: userObject,
+           userId: userObject.id,
            url: article.url,
            title: article.title,
            synopsis: article.synopsis
@@ -23,12 +24,14 @@ export const ArticleForm=()=>{
 
         return fetch(`http://localhost:8088/news`, {
             method:"POST",
-            headers: {"Content-Type":"application/json"},
+            headers: {
+                "Content-Type":"application/json"
+            },
             body: JSON.stringify(articleToSendToAPI)
         })
-        .then(response =>response.json())
+        .then((response) =>response.json())
         .then(()=>{
-            navigate("../../")
+            navigate("/")
         })
 
     }
@@ -67,7 +70,7 @@ export const ArticleForm=()=>{
                         }} />
                     </div>
                 </fieldset>
-                <button onClick={(clickEvent)=>handlePostButtonClick(clickEvent)} className="btn">Post Article</button>
+                <button onClick={(clickEvent)=>handlePostButtonClick(clickEvent)} className="btn btn-primary">Post Article</button>
             </form>
       
     )

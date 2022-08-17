@@ -1,48 +1,55 @@
 {
-    "users": [
-        {
-            "id":1,
-            "username": "ChiefHopper",
-            "email": "hopper@email.com"
-        },
-        {
-            "id": 2,
-            "username": "Eleven",
-            "email": "eleven@email.com"
-        }
-    ],
-    "news": [
-        {
-            "id": 1,
-            "userId": 1,
-            "url": "cnn.com",
-            "title": "News Article",
-            "synopsis": "It's News"
-        }
-    ],
-    "messages": [
-        {
-            "id": 1,
-            "userId": 1,
-            "contents": "This is text",
-            "timeStamp": 1610378858273
-        }
-    ],
-    "events": [
-        {
-            "id": 1,
-            "userId": 1,
-            "name": "Telepathy Festival",
-            "date": "10-1-2022",
-            "location": "Hawkins"
-        }
-    ],
-    "tasks": [
-        {
-            "id": 1,
-            "userId": 1,
-            "task": "Buy Eggos",
-            "completed": true
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "username": "ChiefHopper",
+      "email": "hopper@email.com"
+    },
+    {
+      "id": 2,
+      "username": "Eleven",
+      "email": "eleven@email.com"
+    }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "userId": 1,
+      "url": "cnn.com",
+      "title": "News Article",
+      "synopsis": "It's News"
+    },
+    {
+      "userId": 1,
+      "url": "2",
+      "title": "2",
+      "synopsis": "2",
+      "id": 2
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "userId": 1,
+      "contents": "This is text",
+      "timeStamp": 1610378858273
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "userId": 1,
+      "name": "Telepathy Festival",
+      "date": "10-1-2022",
+      "location": "Hawkins"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "userId": 1,
+      "task": "Buy Eggos",
+      "completed": true
+    }
+  ]
 }
