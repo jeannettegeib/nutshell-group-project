@@ -14,6 +14,7 @@ export const Nutshell = () => {
 			<Authorized>
 				<>
 					<ApplicationViews />
+				
 				</>
 			</Authorized>
 
