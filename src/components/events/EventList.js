@@ -5,115 +5,37 @@ import { Link } from "react-router-dom"
 import { EventForm } from "./EventForm"
 // import { Ticket } from "./Ticket"
 
-
-
-
 export const EventList = () => {
     const [events, setEvents] = useState([])
-    
-   const navigate = useNavigate()
-
-   useEffect (() => {
-    fetch ("http://localhost:8088/events")
-        .then((response) => response.json())
-        .then((eventArray) => {
-            setEvents(eventArray);
-        });
-   }, [events]);
-
-   return(
-    <>
-    <h2 className="taskHeader">Event List</h2>
-    
-    
-    
-    </>
-
-
-    const localNutshellUser = localStorage.getItem("nutshell_user")
-    const nutshellUserObject = JSON.parse(localNutshellUser)
-    
-    useEffect(
-        () => {
-         getAllEvents()
-    },       
-        []
-    )
-   
-   
-   
-   
-   /*
-    useEffect(
-        () => {
-            if (emergency) {
-                const emergencyTickets = tickets.filter(ticket => ticket.emergency === true)
-                setFiltered(emergencyTickets)
-            }
-            else {
-                setFiltered(tickets)
-            }
-        },
-        [emergency]
-    )
-*/
-
-    const getAllEvents = () => {
-        fetch (`http://localhost:8088/events`)
-            .then(response => response.json())
+    const navigate = useNavigate()
+    useEffect (() => {
+        fetch ("http://localhost:8088/events")
+            .then((response) => response.json())
             .then((eventArray) => {
-                setEvents(eventArray)
-    })
+                setEvents(eventArray);
+            });
+       }, [events]);
+
+          return
+   (
+   <>
+   <h2 className="taskHeader">Event List</h2>
+
+   <button
+       className="createEvent"
+       onClick={() => {
+           navigate("/event/create");
+       }}
+       >
+           Create Event
+       </button>
+       </>
+   )
+
 }
-/*
-    useEffect(
-        () => {
-            getAllTickets()
-              
-                fetch(`http://localhost:8088/employees?_expand=user`)
-                .then(response => response.json())
-                .then((employeeArray) => {
-                    setEmployees(employeeArray)
-                })   
-
-           
-        },
-        [] // When this array is empty, you are observing initial component state
-    )
-
-    */
-    
+   
     
    
-   {/* {
-        honeyUserObject.event
-      ? <>
-       <button onClick={  () => { setEmergency(true) } } >Emergency Only</button>
-       <button onClick={  () => { setEmergency(false) } } >Show All</button>
-       </>
-        :<>
-         <button onClick={() => navigate("/ticket/create")}>Create Ticket</button>
-         <button onClick={() => updateOpenOnly(true)}>Open Ticket</button>
-         <button onClick={() => updateOpenOnly(false)}>All My Tickets</button>
-    </>
-    }
-*/}
 
-return <> 
+  
 
-    <h2>List of Events</h2>
-
-
-    <article className="events">
-        { 
-            events.map(
-                (event) => 
-                
-                
-            )
-        }
-</article>
-</>
-
-
-    }

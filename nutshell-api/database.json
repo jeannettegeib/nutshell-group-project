@@ -1,48 +1,63 @@
 {
-    "users": [
-        {
-            "id":1,
-            "username": "ChiefHopper",
-            "email": "hopper@email.com"
-        },
-        {
-            "id": 2,
-            "username": "Eleven",
-            "email": "eleven@email.com"
-        }
-    ],
-    "news": [
-        {
-            "id": 1,
-            "userId": 1,
-            "url": "cnn.com",
-            "title": "News Article",
-            "synopsis": "It's News"
-        }
-    ],
-    "messages": [
-        {
-            "id": 1,
-            "userId": 1,
-            "contents": "This is text",
-            "timeStamp": 1610378858273
-        }
-    ],
-    "events": [
-        {
-            "id": 1,
-            "userId": 1,
-            "name": "Telepathy Festival",
-            "date": "10-1-2022",
-            "location": "Hawkins"
-        }
-    ],
-    "tasks": [
-        {
-            "id": 1,
-            "userId": 1,
-            "task": "Buy Eggos",
-            "completed": true
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "username": "ChiefHopper",
+      "email": "hopper@email.com"
+    },
+    {
+      "id": 2,
+      "username": "Eleven",
+      "email": "eleven@email.com"
+    }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "userId": 1,
+      "url": "cnn.com",
+      "title": "News Article",
+      "synopsis": "It's News"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "userId": 1,
+      "contents": "This is text",
+      "timeStamp": 1610378858273
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "userId": 1,
+      "name": "Telepathy Festival",
+      "date": "10-10-2022",
+      "location": "Hawkins"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "userId": 1,
+      "task": "Buy More Eggos",
+      "expectedComplete": "2022-10-10",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "task": "Find Will",
+      "expectedComplete": "2022-10-01",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "task": "Check Out Pumpkin Patch Decay",
+      "expectedComplete": "2022-10-03",
+      "completed": false,
+      "id": 3
+    }
+  ]
 }
