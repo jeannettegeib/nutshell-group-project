@@ -50,6 +50,20 @@
       "userId": 1,
       "task": "Buy Eggos",
       "completed": true
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "task": "Find Will",
+      "expectedComplete": "2022-10-01",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "task": "Check Out Pumpkin Patch Decay",
+      "expectedComplete": "2022-10-03",
+      "completed": false,
+      "id": 3
     }
   ]
 }
