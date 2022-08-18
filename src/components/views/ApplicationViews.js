@@ -1,4 +1,5 @@
 import { Outlet, Route, Routes } from "react-router-dom";
+import { BookAds } from "../tasks/BookAds";
 import { TaskEdit } from "../tasks/TaskEdit";
 import { TaskForm } from "../tasks/TaskForm";
 import { TaskList } from "../tasks/TaskList";
@@ -22,7 +23,7 @@ export const ApplicationViews = () => {
               {" "}
               Hello, {nutshellUserObject.username}!
             </div>
-
+            <BookAds />
             <Outlet />
           </>
         }

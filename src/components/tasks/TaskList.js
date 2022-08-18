@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
+import { BookAds } from "./BookAds";
 import { Task } from "./Task";
 import "./tasks.css";
 
 export const TaskList = () => {
   const [tasks, setTasks] = useState([]);
+  // new state for google books api resource
+  const [books, udpateBooks] = useState({});
 
   const navigate = useNavigate();
 
@@ -35,27 +38,31 @@ export const TaskList = () => {
         {tasks.map((task) => {
           if (task.completed === false) {
             return (
-              <section className="taskItems">
-                <section className="taskItem" key={`task--${task.id}`}>
-                  <Task taskProp={task} />
-                  <section className="column">
-                    <div className="taskName">
-                      <Link to={`/tasks/${task.id}`}>{task.task}</Link>
-                    </div>
-                    <div className="complete">
-                      Complete By: {task.expectedComplete}
-                    </div>
-                    {/* <button 
+              <>
+                <div></div>
+
+                <section className="taskItems">
+                  <section className="taskItem" key={`task--${task.id}`}>
+                    <Task taskProp={task} />
+                    <section className="column">
+                      <div className="taskName">
+                        <Link to={`/tasks/${task.id}`}>{task.task}</Link>
+                      </div>
+                      <div className="complete">
+                        Complete By: {task.expectedComplete}
+                      </div>
+                      {/* <button 
                     className="button"
                     onClick={() => navigate("tasks/taskId")}>
             Edit
           </button> */}
+                    </section>
                   </section>
                 </section>
-              </section>
+              </>
             );
           } else {
-            return ""
+            return "";
           }
         })}
       </article>
