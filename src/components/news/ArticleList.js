@@ -1,21 +1,27 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./News.css"
 
 export const ArticleList =()=>{
     const [articles , setArticles]=useState([])
     const navigate=useNavigate()
 
-    useEffect(
-        ()=>{
-            fetch(`http://localhost:8088/news`)
+    const getArticles=()=>{
+        return (
+        fetch(`http://localhost:8088/news`)
             .then(response=>response.json())
             .then( (articleArray)=>{setArticles(articleArray) }  )
-            console.log(articles)
+            )      
+    }
+
+    useEffect(
+        ()=>{
+            return getArticles() 
         },
         []
     )
 
+  
     return(
         <React.Fragment>
             <article className="news">
@@ -23,16 +29,35 @@ export const ArticleList =()=>{
             {
                 articles.map(
                     (article)=>{
-                        return (<section className="article" key={`task--${article.id}`}>
+                        return (
+                        <section className="article" key={`article--${article.id}`}>
+                            
                             <header className="title">
                                 {article.title}
                             </header>
+                            
                             <p className="synopsis">
                                 {article.synopsis}
                             </p>
-                            <footer>
-                                {article.url}
+
+                            <footer className="url">
+                            <Link to={`${article.url}`}>{article.url}</Link>
+                                
                             </footer>
+
+                            <button onClick={()=>{navigate(`/article/${article.id}`)}}
+                            className="article_edit">Edit
+                            </button>
+
+                            <button onClick={()=>{
+                            fetch(`http://localhost:8088/news/${article.id}`,{
+                            method: "DELETE" 
+                             })
+                            .then(()=>{getArticles()})
+                            }}
+                            className="article_delete">Delete
+                            </button>
+    
                         </section>
                  ) }
                 )
