@@ -9,6 +9,16 @@
       "id": 2,
       "username": "Eleven",
       "email": "eleven@email.com"
+    },
+    {
+      "id": 3,
+      "username": "TheFreak",
+      "email": "emuns@email.com"
+    },
+    {
+      "id": 4,
+      "username": "KingSteve",
+      "email": "harrington@gmail.com"
     }
   ],
   "news": [
@@ -41,9 +51,9 @@
       "id": 3
     },
     {
-      "userId": 1,
-      "contents": "New Message",
-      "timeStamp": 1660841683662,
+      "userId": 2,
+      "contents": "Explicabo odio est rerum soluta quia dolorem minus ut. Harum perspiciatis expedita quo eius enim quasi. Incidunt eaque expedita in dolores quidem quas maxime nesciunt. Dolores et quis.",
+      "timeStamp": 1660850416020,
       "id": 4
     }
   ],

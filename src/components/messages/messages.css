@@ -3,29 +3,23 @@
     flex-direction: column;
     border: 1px dotted black;
     padding: 0.7rem;
-    width: 25%;
+    height: 10rem;
+    width: 20rem;
     overflow: auto;
-}
-.messageForm {
-    display: flex;
-    flex-direction: column;
-    border: 1px dotted black;
-    padding: 0.7rem;
-    width: 25%;
 }
 .messageForm__title {
     text-align: center;
 }
 .message {
-    background-color: rgb(243, 230, 255);
+    background-color: rgba(236, 173, 173, 0.432);
     border: 1px dotted darkmagenta;
     padding: 0.7rem;
     margin: 0.5rem 0;
 }
-.message__Text {
+/* .message__Text {
     align-self: center;
     color: grey;
-}
+} */
 .nut__Button {
     width: 50%;
     align-self: center;
@@ -34,4 +28,12 @@
 }
 .messages__header {
     text-align: center;
+}
+.nutMessageForm{
+    display: flex;
+    flex-direction: column;
+    padding: 0.7rem;
+    height: 10rem;
+    width: 20rem;
+    overflow: auto;
 }

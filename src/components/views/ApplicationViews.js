@@ -4,8 +4,8 @@ import { TaskForm } from "../tasks/TaskForm";
 import { TaskList } from "../tasks/TaskList";
 import { MessageList } from "../messages/messageList.js";
 import { MessageForm } from "../messages/messageForm";
-import {MessageEdit} from "../messages/messageEdit";
 export const ApplicationViews = () => {
+  
   const localNutshellUser = localStorage.getItem("nutshell_user");
   const nutshellUserObject = JSON.parse(localNutshellUser);
 
@@ -31,7 +31,6 @@ export const ApplicationViews = () => {
           </>
         }
       >
-        <Route path="messages/:messageId/edit" element={<MessageEdit/> } />
         <Route path="/task/create" element={<TaskForm />} />
         <Route path="/message/create" element={ <MessageForm /> } />
         <Route path="tasks/:taskId" element={<TaskEdit />} />
