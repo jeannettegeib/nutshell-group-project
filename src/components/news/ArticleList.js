@@ -16,9 +16,13 @@ export const ArticleList =()=>{
 
     useEffect(
         ()=>{
-            return getArticles() 
+            (
+                fetch(`http://localhost:8088/news`)
+                    .then(response=>response.json())
+                    .then( (articleArray)=>{setArticles(articleArray) }  )
+                    )  
         },
-        []
+        [articles]
     )
 
   
