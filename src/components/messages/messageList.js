@@ -1,34 +1,41 @@
 import { useEffect, useState } from "react"
+import { useNavigate, Link } from "react-router-dom"
+import "./messages.css"
+
 
 export const MessageList = () => {
     const [messages, setMessages] = useState([])
-
+    const [username, setUsername] = useState([])
+    const navigate = useNavigate()
     useEffect(
         () => {
-            fetch(`http://localhost:8088/users?_embed=messages`)
+            fetch(`http://localhost:8088/messages?_expand=user`)
                 .then(response => response.json())
-                .then(() => {
-
+                .then((messageArray) => {
+                    setMessages(messageArray)
                 })
-            console.log("Initial state of messages", messages) // View the initial state of tickets
+            console.log("Initial state of messages", messages) 
         },
-        [] // When this array is empty, you are observing initial component state
+        [] 
     )
-    return <> 
-    
-    <h2>List of Messages</h2>
+    return <>
+
+
         <article className="messages">
+            <h3 className="messages__header">Messages</h3>
             {
 
                 messages.map(
                     (message) => {
-                        return <section className="message">
-                            <header>{message.contents}</header>
-                            <footer>{message.timestamp}</footer>
+                        return <section className="message" key={`message--${message.id}`}>
+                            <div>{message?.user?.username}: {message.contents}</div>
+                            {/* <Link to={`/messages/${message.id}/edit`}>Edit</Link> */}
+
                         </section>
                     }
                 )
             }
+            <button className="nut__Button" onClick={() => navigate("/message/create")}>Chat</button>
         </article>
     </>
 }
