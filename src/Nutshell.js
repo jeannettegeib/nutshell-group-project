@@ -8,6 +8,7 @@ import { Authorized } from "./components/views/Authorized"
 
 
 
+
 export const Nutshell = () => {
 	return (<Routes>
 		<Route path="/login" element={<Login />} />
@@ -15,7 +16,11 @@ export const Nutshell = () => {
 		<Route path="*" element={
 			<Authorized>
 				<>
+
+	
+
 					<NavBar />
+
 					<ApplicationViews />
 
 				</>

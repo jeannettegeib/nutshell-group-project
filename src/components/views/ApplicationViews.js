@@ -8,15 +8,18 @@ import { CompletedTasks } from "../tasks/CompletedTasks";
 import { TaskEdit } from "../tasks/TaskEdit";
 import { TaskForm } from "../tasks/TaskForm";
 import { TaskList } from "../tasks/TaskList";
+import {EventList} from "../events/EventList";
+import { EventForm } from "../events/EventForm";
+import { EventEdit } from "../events/EventEdit";
 import "./views.css";
 import { MessageList } from "../messages/messageList.js";
 import { MessageForm } from "../messages/messageForm";
 
 
+
 export const ApplicationViews = () => {
   const localNutshellUser = localStorage.getItem("nutshell_user");
   const nutshellUserObject = JSON.parse(localNutshellUser);
-
   return (
     <Routes>
       <Route
@@ -32,6 +35,19 @@ export const ApplicationViews = () => {
               {" "}
               Hello, {nutshellUserObject.username}!
             </div>
+
+            <EventList />
+            <TaskList />
+            {/* <EventEdit /> */}
+            
+          </>
+        }
+      />
+      <Route path ="/event/:eventId" element={<EventEdit />} />
+        <Route path="/event/create" element={<EventForm />} />
+        <Route path="/task/create" element={<TaskForm />} />
+       
+
             <BookAds />
             <MessageList />
             <TaskList />
@@ -46,8 +62,10 @@ export const ApplicationViews = () => {
         <Route path="/task/create" element={<TaskForm />} />
         <Route path="/task/complete" element={<CompletedTasks />} />
         <Route path="/message/create" element={<MessageForm />} />
+
         <Route path="tasks/:taskId" element={<TaskEdit />} />
-      </Route>
+       
+     
     </Routes>
   );
 };
