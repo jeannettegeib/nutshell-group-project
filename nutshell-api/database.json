@@ -9,23 +9,59 @@
       "id": 2,
       "username": "Eleven",
       "email": "eleven@email.com"
+    },
+    {
+      "id": 3,
+      "username": "TheFreak",
+      "email": "emuns@email.com"
+    },
+    {
+      "id": 4,
+      "username": "KingSteve",
+      "email": "harrington@gmail.com"
     }
   ],
   "news": [
     {
-      "id": 1,
       "userId": 1,
-      "url": "cnn.com",
-      "title": "News Article",
-      "synopsis": "It's News"
+      "url": "https://gizmodo.com/joe-keery-steve-hair-stranger-things-netflix-1849414252",
+      "title": "Joe Keery Is Sick of You Talking About His Stranger Things Hair",
+      "synopsis": "Why are fans are so fixated on Steve's hair? Maybe because it's AMAZING! Duh!  ;-)",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "url": "https://www.usmagazine.com/entertainment/pictures/stranger-things-season-5-everything-to-know-about-the-final-season/",
+      "title": "Everything to Know About the 5th and Final Season of ‘Stranger Things’",
+      "synopsis": "Season 5 will complete the story arch. I don't want it to end!",
+      "id": 3
     }
   ],
   "messages": [
     {
-      "id": 1,
       "userId": 1,
-      "contents": "This is text",
-      "timeStamp": 1610378858273
+      "contents": "Voluptas et molestiae temporibus et atque voluptatibus repellat eum. Aut voluptatem aut amet eos qui. Quidem sapiente omnis aperiam ratione. Autem tempora enim. Sint aut et ducimus eos sequi consequatur id deserunt. Modi magni qui dolores quis consectetur voluptatem ut occaecati sed.",
+      "timeStamp": 1660835937789,
+      "id": 1,
+      "description": "Voluptas et molestiae temporibus et atque voluptatibus repellat eum. Aut voluptatem aut amet eos qui. Quidem sapiente omnis aperiam ratione. Autem tempora enim. Sint aut et ducimus eos sequi consequatur id deserunt. Modi magni qui dolores quis consectetur voluptatem ut occaecati sed"
+    },
+    {
+      "userId": 1,
+      "contents": "    Vitae harum vero ullam omnis. Debitis eius ea voluptatem non atque deleniti quasi aut. Illum aut aut est vitae eum ea et in. Non vitae accusantium molestiae deleniti ipsa aut sint. Maxime ut culpa quae quo architecto sit consectetur ipsa asperiores. Explicabo quae officia rem pariatur.",
+      "timeStamp": 1660835970645,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "contents": "Esse molestiae vel blanditiis ut provident officia quia sit. Et et sequi in quo aut quis. Facilis veniam hic qui. Commodi voluptatem sed deleniti.",
+      "timeStamp": 1660836804558,
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "contents": "Explicabo odio est rerum soluta quia dolorem minus ut. Harum perspiciatis expedita quo eius enim quasi. Incidunt eaque expedita in dolores quidem quas maxime nesciunt. Dolores et quis.",
+      "timeStamp": 1660850416020,
+      "id": 4
     }
   ],
   "events": [
@@ -66,6 +102,7 @@
     {
       "id": 1,
       "userId": 1,
+
       "task": "Buy Eggos",
       "completed": true
     },
@@ -73,6 +110,22 @@
       "userId": 2,
       "task": "test 5",
       "expectedComplete": "2022-08-24",
+
+      "task": "Buy More Eggos",
+      "expectedComplete": "2022-10-10",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "task": "Find Will",
+      "expectedComplete": "2022-10-01",
+      "completed": true
+    },
+    {
+      "userId": 1,
+      "task": "Check Out Pumpkin Patch Decay",
+      "expectedComplete": "2022-10-03",
       "completed": false,
       "id": 2
     }
