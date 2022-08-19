@@ -1,8 +1,10 @@
 import { Outlet, Route, Routes } from "react-router-dom";
 import { BookAds } from "../tasks/BookAds";
+import { CompletedTasks } from "../tasks/CompletedTasks";
 import { TaskEdit } from "../tasks/TaskEdit";
 import { TaskForm } from "../tasks/TaskForm";
 import { TaskList } from "../tasks/TaskList";
+import "./views.css"
 
 export const ApplicationViews = () => {
   const localNutshellUser = localStorage.getItem("nutshell_user");
@@ -31,6 +33,8 @@ export const ApplicationViews = () => {
         <Route path="/task/create" element={<TaskForm />} />
 
         <Route path="/" element={<TaskList />} />
+
+        <Route path="/task/complete" element={<CompletedTasks />} />
 
         <Route path="tasks/:taskId" element={<TaskEdit />} />
       </Route>

@@ -50,7 +50,7 @@
       "userId": 1,
       "task": "Find Will",
       "expectedComplete": "2022-10-01",
-      "completed": false
+      "completed": true
     },
     {
       "userId": 1,

@@ -4,11 +4,10 @@ import { Link } from "react-router-dom";
 import { BookAds } from "./BookAds";
 import { Task } from "./Task";
 import "./tasks.css";
+import { TaskStatistics } from "./TaskStatistics";
 
 export const TaskList = () => {
   const [tasks, setTasks] = useState([]);
-  // new state for google books api resource
-  const [books, udpateBooks] = useState({});
 
   const navigate = useNavigate();
 
@@ -25,6 +24,8 @@ export const TaskList = () => {
       <br></br>
       <h3 className="taskHeader">Task List</h3>
 
+      <TaskStatistics />
+
       <button
         className="createTask"
         onClick={() => {
@@ -34,13 +35,20 @@ export const TaskList = () => {
         Create Task
       </button>
 
+      <button
+        className="completedTasks"
+        onClick={() => {
+          navigate("/task/complete");
+        }}
+      >
+        Completed Tasks
+      </button>
+
       <article className="taskList">
         {tasks.map((task) => {
           if (task.completed === false) {
             return (
               <>
-                <div></div>
-
                 <section className="taskItems">
                   <section className="taskItem" key={`task--${task.id}`}>
                     <Task taskProp={task} />

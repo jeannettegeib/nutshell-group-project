@@ -41,6 +41,16 @@ export const TaskForm = () => {
   return (
     <form className="taskForm">
       <h2 className="taskForm_title">Create New Task</h2>
+
+      <button
+        className="backButton"
+        onClick={() => {
+          navigate("/");
+        }}
+      >
+        Back
+      </button>
+
       <fieldset>
         <div className="form-group">
           <label htmlFor="task">Task to Complete: </label>
