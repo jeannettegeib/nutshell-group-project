@@ -4,7 +4,9 @@ import { CompletedTasks } from "../tasks/CompletedTasks";
 import { TaskEdit } from "../tasks/TaskEdit";
 import { TaskForm } from "../tasks/TaskForm";
 import { TaskList } from "../tasks/TaskList";
-import "./views.css"
+import "./views.css";
+import { MessageList } from "../messages/messageList.js";
+import { MessageForm } from "../messages/messageForm";
 
 export const ApplicationViews = () => {
   const localNutshellUser = localStorage.getItem("nutshell_user");
@@ -26,15 +28,16 @@ export const ApplicationViews = () => {
               Hello, {nutshellUserObject.username}!
             </div>
             <BookAds />
+            <MessageList />
+            <TaskList />
             <Outlet />
           </>
-        }
-      >
+        }>
         <Route path="/task/create" element={<TaskForm />} />
 
-        <Route path="/" element={<TaskList />} />
-
         <Route path="/task/complete" element={<CompletedTasks />} />
+
+        <Route path="/message/create" element={<MessageForm />} />
 
         <Route path="tasks/:taskId" element={<TaskEdit />} />
       </Route>
