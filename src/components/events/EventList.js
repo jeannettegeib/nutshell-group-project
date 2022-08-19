@@ -14,23 +14,33 @@ export const EventList = () => {
             .then((eventArray) => {
                 setEvents(eventArray);
             });
-       }, [events]);
+       }, []);
 
-          return
-   (
-   <>
+          return<>
    <h2 className="taskHeader">Event List</h2>
-
+   <header>
+    
+</header>
    <button
        className="createEvent"
        onClick={() => {
            navigate("/event/create");
+           
        }}
+
        >
            Create Event
        </button>
+       {events.map(singleEventObject => {
+        return <div> <Link to={`/event/${singleEventObject.id}`}>Edit Event {events.id}</Link>{singleEventObject.name} , {singleEventObject.date} <br></br>
+        {singleEventObject.location}
+        </div> 
+
+         
+       })}
+
        </>
-   )
+   
 
 }
    

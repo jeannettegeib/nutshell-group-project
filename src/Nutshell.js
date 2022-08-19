@@ -3,6 +3,7 @@ import { Login } from "./components/auth/Login"
 import { Register } from "./components/auth/Register"
 import { ApplicationViews } from "./components/views/ApplicationViews"
 import { Authorized } from "./components/views/Authorized"
+import {NavBar} from "./components/nav/NavBar"
 
 
 
@@ -13,6 +14,7 @@ export const Nutshell = () => {
     <Route path="*" element={
 			<Authorized>
 				<>
+				<NavBar/>
 					<ApplicationViews />
 				
 				</>

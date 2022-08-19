@@ -33,31 +33,48 @@
       "id": 1,
       "userId": 1,
       "name": "Telepathy Festival",
-      "date": "10-10-2022",
+      "date": "10-1-2022",
       "location": "Hawkins"
+    },
+    {
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "userId": 2,
+      "name": "school",
+      "date": "2022-08-14",
+      "location": "school",
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "name": "lunch",
+      "date": "2022-06-08",
+      "location": "Ice Cream Shop",
+      "id": 4
+    },
+    {
+      "userId": 2,
+      "name": "dance!!!!",
+      "date": "2022-08-16",
+      "location": "school rules",
+      "id": 5
     }
   ],
   "tasks": [
     {
       "id": 1,
       "userId": 1,
-      "task": "Buy More Eggos",
-      "expectedComplete": "2022-10-10",
-      "completed": false
+      "task": "Buy Eggos",
+      "completed": true
     },
     {
-      "id": 2,
-      "userId": 1,
-      "task": "Find Will",
-      "expectedComplete": "2022-10-01",
-      "completed": false
-    },
-    {
-      "userId": 1,
-      "task": "Check Out Pumpkin Patch Decay",
-      "expectedComplete": "2022-10-03",
+      "userId": 2,
+      "task": "test 5",
+      "expectedComplete": "2022-08-24",
       "completed": false,
-      "id": 3
+      "id": 2
     }
   ]
 }

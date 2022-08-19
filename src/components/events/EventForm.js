@@ -6,10 +6,10 @@ export const EventForm = () => {
         TODO: Add the correct default properties to the
         initial state object
     */
-    const [event, update] = useState({
-        Name: "",
-        Date: "",
-        Location: ""
+    const [newEvent, update] = useState({
+        name: "",
+        date: "",
+        location: ""
 
     })
     /*
@@ -38,9 +38,9 @@ export const EventForm = () => {
         */
         const eventToSendToAPI = {
             userId: nutshellUserObject.id,
-            name: event.name,
-            date: event.date,
-            location: event.location
+            name: newEvent.name,
+            date: newEvent.date,
+            location: newEvent.location
         }
 
 
@@ -55,7 +55,7 @@ export const EventForm = () => {
         })
         .then(response => response.json())
         .then(() => {
-            navigate("/events")
+            navigate("/")
     })
 }
 
@@ -70,31 +70,58 @@ export const EventForm = () => {
                         type="text"
                         className="form-control"
                         placeholder="Name of event"
-                        value={event.name}
+                        value={newEvent.name}
                         onChange={
                             (evt) => {
-                                const copy = {...event}
+                                const copy = {...newEvent}
                                 copy.name =evt.target.value
                                 update(copy)
+              
+    
                             }
-                        } />
-                </div>
-            </fieldset>
-         {/*   <fieldset>
-                <div className="form-group">
-                    <label htmlFor="name">Emergency:</label>
-                    <input type="checkbox"
-                        value={ticket.emergency}
+                        } 
+                        />
+                            </div>
+                           </fieldset>
+                           <fieldset> 
+                            <div
+                             className="form-group">
+                    <label htmlFor="name">Date of Event</label>
+                    <input
+                        required autoFocus
+                        type="date"
+                        className="form-control"
+                        placeholder="Enter event date"
+                        value={newEvent.date}
                         onChange={
                             (evt) => {
-                                const copy = {...ticket}
-                                copy.emergency = evt.target.checked
+                                const copy = {...newEvent}
+                                copy.date =evt.target.value
                                 update(copy)
                             }
                         } />
                 </div>
             </fieldset>
-                    */}
+            <fieldset> 
+                            <div
+                             className="form-group">
+                    <label htmlFor="name">Event Location</label>
+                    <input
+                        required autoFocus
+                        type="text"
+                        className="form-control"
+                        placeholder="Enter event location"
+                        value={newEvent.location}
+                        onChange={
+                            (evt) => {
+                                const copy = {...newEvent}
+                                copy.location =evt.target.value
+                                update(copy)
+                            }
+                        } />
+                </div>
+            </fieldset>
+            
             <button 
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
             className="btn btn-primary">
@@ -103,3 +130,4 @@ export const EventForm = () => {
         </form>
     )
 }
+
