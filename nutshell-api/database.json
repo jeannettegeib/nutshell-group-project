@@ -23,11 +23,18 @@
   ],
   "news": [
     {
-      "id": 1,
       "userId": 1,
-      "url": "cnn.com",
-      "title": "News Article",
-      "synopsis": "It's News"
+      "url": "https://gizmodo.com/joe-keery-steve-hair-stranger-things-netflix-1849414252",
+      "title": "Joe Keery Is Sick of You Talking About His Stranger Things Hair",
+      "synopsis": "Why are fans are so fixated on Steve's hair? Maybe because it's AMAZING! Duh!  ;-)",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "url": "https://www.usmagazine.com/entertainment/pictures/stranger-things-season-5-everything-to-know-about-the-final-season/",
+      "title": "Everything to Know About the 5th and Final Season of ‘Stranger Things’",
+      "synopsis": "Season 5 will complete the story arch. I don't want it to end!",
+      "id": 3
     }
   ],
   "messages": [
@@ -62,7 +69,7 @@
       "id": 1,
       "userId": 1,
       "name": "Telepathy Festival",
-      "date": "10-10-2022",
+      "date": "10-1-2022",
       "location": "Hawkins"
     }
   ],
