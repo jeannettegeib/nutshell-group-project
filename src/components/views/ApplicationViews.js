@@ -1,11 +1,14 @@
 import { Outlet, Route, Routes } from "react-router-dom";
+import { BookAds } from "../tasks/BookAds";
+import { CompletedTasks } from "../tasks/CompletedTasks";
 import { TaskEdit } from "../tasks/TaskEdit";
 import { TaskForm } from "../tasks/TaskForm";
 import { TaskList } from "../tasks/TaskList";
+import "./views.css";
 import { MessageList } from "../messages/messageList.js";
 import { MessageForm } from "../messages/messageForm";
+
 export const ApplicationViews = () => {
-  
   const localNutshellUser = localStorage.getItem("nutshell_user");
   const nutshellUserObject = JSON.parse(localNutshellUser);
 
@@ -24,15 +27,18 @@ export const ApplicationViews = () => {
               {" "}
               Hello, {nutshellUserObject.username}!
             </div>
-
-            <Outlet />
+            <BookAds />
             <MessageList />
-            <TaskList/>
+            <TaskList />
+            <Outlet />
           </>
-        }
-      >
+        }>
         <Route path="/task/create" element={<TaskForm />} />
-        <Route path="/message/create" element={ <MessageForm /> } />
+
+        <Route path="/task/complete" element={<CompletedTasks />} />
+
+        <Route path="/message/create" element={<MessageForm />} />
+
         <Route path="tasks/:taskId" element={<TaskEdit />} />
       </Route>
     </Routes>

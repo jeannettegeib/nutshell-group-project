@@ -42,3 +42,26 @@
     width: min-content;
     margin-top: 5px;
 }
+
+.bookAd {
+    margin: 15px;
+}
+
+.completedTasks {
+    margin-left: 9px;
+}
+
+.statistics {
+    margin-left: 6px;
+    margin-bottom: 9px;
+
+}
+
+.backButton {
+    margin-left: 9px;
+    margin-bottom: 5px;
+}
+.btn-primary {
+    margin-left: 9px;
+    margin-top: 5px;
+}
