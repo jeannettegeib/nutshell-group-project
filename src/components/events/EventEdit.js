@@ -107,20 +107,7 @@ export const EventEdit = () => {
                     }>{events.location}</textarea>
             </div>
         </fieldset>
-        {/* <fieldset>
-            <div className="form-group">
-                <label htmlFor="name">Emergency:</label>
-                <input type="checkbox"
-                    onChange={
-                        (evt) => {
-                            // TODO: Update state with a modified copy
-                            const copy = { ...events }
-                            copy.emergency = evt.target.checked
-                            editEvents(copy)
-                        }
-                    } />
-            </div>
-        </fieldset> */}
+     
         <button
             onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
             className="btn btn-primary">

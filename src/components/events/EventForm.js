@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 
 export const EventForm = () => {
     /*
-        TODO: Add the correct default properties to the
+         Add the correct default properties to the
         initial state object
     */
     const [newEvent, update] = useState({
@@ -13,7 +13,7 @@ export const EventForm = () => {
 
     })
     /*
-        TODO: Use the useNavigation() hook so you can redirect
+         Use the useNavigation() hook so you can redirect
         the user to the ticket list
     */
     const navigate = useNavigate()
@@ -25,17 +25,9 @@ export const EventForm = () => {
       
       
 
-        // TODO: Create the object to be saved to the API
+        // Create the object to be saved to the API
 
-           /*
-  {
-    "id": 2,
-    "userId": 3,
-    "description": "Vero est adipisci sed natus quasi consectetur occaecati. Modi maxime sunt officia cumque. Vel at culpa. Sint accusamus deserunt dolorem qui.",
-    "emergency": true,
-    "dateCompleted": ""
-  }
-        */
+   
         const eventToSendToAPI = {
             userId: nutshellUserObject.id,
             name: newEvent.name,
@@ -45,7 +37,7 @@ export const EventForm = () => {
 
 
 
-        // TODO: Perform the fetch() to POST the object to the API
+        //  Perform the fetch() to POST the object to the API
         return fetch (`http://localhost:8088/events`, {
             method: "POST" ,
             headers: {
@@ -106,7 +98,7 @@ export const EventForm = () => {
                             <div
                              className="form-group">
                     <label htmlFor="name">Event Location</label>
-                    <input
+                    <input 
                         required autoFocus
                         type="text"
                         className="form-control"
