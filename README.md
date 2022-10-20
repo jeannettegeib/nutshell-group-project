@@ -5,7 +5,7 @@ This is a group project stemming from a practice assignment for NewForce coding 
 Skills used in the project:
 1. Functions
 1. Databases/API
-1. Github
+1. Github & Agile methodology
 1. Objects
 1. CSS
 1. Handling user events
